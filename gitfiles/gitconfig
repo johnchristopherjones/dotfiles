@@ -1,0 +1,43 @@
+[include]
+  	# For username / creds / etc
+	# http://stackoverflow.com/questions/8505335/hiding-github-token-in-gitconfig
+  	path = ~/.gitfiles/gitconfig.local
+
+[push]
+	default = matching
+
+[color]
+	status = auto
+	diff = auto
+	branch = auto
+
+[alias]
+	lg = log --graph --pretty=tformat:'%Cred%h%Creset -%C(magenta)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+	cdiff = diff --no-ext-diff
+	logl = log --pretty=oneline --abbrev-commit
+	co = checkout
+	br = branch
+	ci = commit
+	st = status
+	unstage = reset HEAD --
+	last = log -1 HEAD
+	visual = !gitk
+	stash-unapply = !git stash show -p | git apply -R
+
+[core]
+	autocrlf = false
+    attributesfile = ~/.gitfiles/gitattributes
+    editor = atom --wait
+	excludesfile = ~/.gitfiles/gitignore
+
+[diff "odf"]
+      textconv = odf2txt --break-sentences
+
+[diff "markdown"]
+      textconv = pandoc -t markdown_github --no-wrap --filter=PDsentences.hs
+
+[man]
+      viewer = catman
+
+[man "catman"]
+     cmd = man -P cat
