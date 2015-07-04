@@ -1,12 +1,12 @@
-- clean: ['~']
+- clean: ['~', '~/.config']
 
 - link:
-    ~/.bashrc: bashrc
-    ~/.zsh: zsh
-    ~/.emacs: emacs
     ~/.dotfiles: ''
-    ~/.vim: vim/
-    ~/.vimrc: vimrc
+    ~/.bashrc: bashrc
+    # ~/.zsh: zsh
+    # ~/.emacs: emacs
+    ~/.gitfiles: gitfiles/,
+    ~/.gitconfig: gitfiles/gitconfig,
 
 - shell:
-    - [git submodule update --init --recursive, Installing submodules]
+    - git update-submodules # after linking ~/.gitconfig
