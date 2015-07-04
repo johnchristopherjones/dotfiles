@@ -9,4 +9,4 @@
     ~/.gitconfig: gitfiles/gitconfig
 
 - shell:
-    - git update-submodules # after linking ~/.gitconfig
+    - [git update-submodules, Installing submodules]
