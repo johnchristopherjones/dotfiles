@@ -5,8 +5,8 @@
     ~/.bashrc: bashrc
     # ~/.zsh: zsh
     # ~/.emacs: emacs
-    ~/.gitfiles: gitfiles/,
-    ~/.gitconfig: gitfiles/gitconfig,
+    ~/.gitfiles: gitfiles
+    ~/.gitconfig: gitfiles/gitconfig
 
 - shell:
     - git update-submodules # after linking ~/.gitconfig
