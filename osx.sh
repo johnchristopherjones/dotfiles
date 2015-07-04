@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# Dervied from https://github.com/daviesjamie/dotfiles
+
 # Get administrator privileges
 sudo -v
 

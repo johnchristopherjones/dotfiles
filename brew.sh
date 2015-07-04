@@ -17,6 +17,7 @@ brew upgrade
 brew install fish --HEAD
 brew install hub
 brew install macvim --with-lua --custom-icons --override-system-vim --HEAD
+brew install pandoc
 brew install python
 brew install ruby
 brew install ssh-copy-id
