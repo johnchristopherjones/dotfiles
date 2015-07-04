@@ -17,6 +17,7 @@ brew upgrade
 brew install fish --HEAD
 brew install hub
 brew install macvim --with-lua --custom-icons --override-system-vim --HEAD
+brew install node
 brew install pandoc
 brew install python
 brew install ruby
@@ -27,7 +28,11 @@ brew install wget
 
 # Install essential casks
 brew install caskroom/cask/brew-cask
+brew cask install 1password
+brew cask install atom
+apm stars --install
 brew cask install dropbox
+brew cask install evernote
 brew cask install flux
 brew cask install google-chrome
 # brew cask install hazel
@@ -41,6 +46,7 @@ brew cask install steam
 ## brew cask install torbrowser
 ## brew cask install trim-enabler
 ## brew cask install utorrent
+brew cask install vlc
 # brew cask install mactex
 
 # Remove outdated versions from the Cellar
