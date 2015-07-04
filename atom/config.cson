@@ -1,0 +1,19 @@
+"*":
+  editor:
+    invisibles: {}
+    showIndentGuide: true
+    tabLength: 4
+  core:
+    themes: [
+      "seti-ui"
+      "seti-syntax"
+    ]
+  "exception-reporting":
+    userId: "da82e34e-ff7a-e29a-d995-03a3d26e3eb1"
+  welcome:
+    showOnStartup: false
+  "tree-view": {}
+  linter: {}
+  "unity-ui":
+    colorStatusIndicatorsInTreeView: true
+  "atom-alignment": {}

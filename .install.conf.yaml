@@ -7,6 +7,22 @@
     # ~/.emacs: emacs
     ~/.gitfiles: gitfiles
     ~/.gitconfig: gitfiles/gitconfig
+    ~/.hushlogin: hushlogin
+    ~/.atom/config.cson:
+        create: true
+        path: atom/config.cson
+    ~/.atom/config.cson:
+        create: true
+        path: atom/config.cson
+    ~/.atom/keymap.cson:
+        create: true
+        path: atom/keymap.cson
+    ~/.atom/snippets.cson:
+        create: true
+        path: atom/snippets.cson
+    ~/.atom/styles.less:
+        create: true
+        path: atom/styles.less
 
 - shell:
     - [git update-submodules, Installing submodules]
