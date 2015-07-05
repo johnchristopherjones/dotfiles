@@ -17,7 +17,7 @@ brew upgrade
 brew install coreutils
 # brew install fish --HEAD
 brew install hub
-brew install macvim --with-lua --custom-icons --override-system-vim --HEAD
+brew install macvim --env-std --with-lua --custom-icons --override-system-vim --HEAD
 brew install node
 brew install pandoc
 brew install python
