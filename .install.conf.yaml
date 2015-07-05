@@ -8,6 +8,8 @@
     ~/.gitfiles: gitfiles
     ~/.gitconfig: gitfiles/gitconfig
     ~/.hushlogin: hushlogin
+    ~/.zsh: zsh/
+    ~/.zshrc: zshrc
     ~/.atom/config.cson:
         create: true
         path: atom/config.cson
