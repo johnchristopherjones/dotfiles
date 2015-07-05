@@ -5,6 +5,8 @@
 # RPR_SHOW_GIT=(true, false) - show git status in rhs prompt
 
 # Set custom prompt
+source ~/.dotfiles/powerline/powerline/bindings/zsh/powerline.zsh
+return
 
 # Allow for variable/function substitution in prompt
 setopt prompt_subst
