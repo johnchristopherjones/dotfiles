@@ -28,3 +28,6 @@
 
 - shell:
     - [git update-submodules, Installing submodules]
+    -
+        - bash -c 'PIP_REQUIRE_VIRTUALENV=false pip install powerline-status'
+        - Install Powerline via pip

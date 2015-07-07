@@ -1,1 +1,1 @@
-PATH=~/.dotfiles/bin:~/.dotfiles/powerline/scripts:${PATH}
+PATH=~/.dotfiles/bin:${PATH}
