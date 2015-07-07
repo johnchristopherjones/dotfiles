@@ -25,6 +25,7 @@
 	stash-unapply = !git stash show -p | git apply -R
     update-submodules = submodule update --init --recursive
     upgrade-submodules = submodule update --init --remote
+    list-submodules = !git submodule foreach | cut -f 2 -d\\'
 
 [core]
 	autocrlf = false
