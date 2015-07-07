@@ -28,6 +28,7 @@ brew install tree
 brew install wget
 
 # Install essential casks
+export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 brew install caskroom/cask/brew-cask
 brew cask install 1password
 brew cask install atom
@@ -39,6 +40,7 @@ brew cask install google-chrome
 # brew cask install hazel
 brew cask install keyboard-maestro
 # brew cask install kaleidoscope
+# brew cask install microsoft-office
 brew cask install mplayerx
 brew cask install skype
 brew cask install spotify
