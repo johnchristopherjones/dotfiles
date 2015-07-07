@@ -6,6 +6,7 @@
 
 # Set custom prompt
 source ~/.dotfiles/powerline/powerline/bindings/zsh/powerline.zsh
+powerline-daemon -q
 return
 
 # Allow for variable/function substitution in prompt
