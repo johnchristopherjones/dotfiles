@@ -27,6 +27,11 @@ brew install the_silver_searcher
 brew install tree
 brew install wget
 
+# Install fonts
+brew tap caskroom/fonts
+brew cask install font-source-code-pro
+brew cask install font-source-code-pro-for-powerline
+
 # Install essential casks
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 brew install caskroom/cask/brew-cask
