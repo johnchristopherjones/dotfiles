@@ -24,7 +24,12 @@ KEYTIMEOUT=1 # corresponds to 10ms
 # Use vim as the editor
 export EDITOR=atom
 
-# # Use vim style line editing in zsh
+# Use emacs style line editing in zsh
+bindkey -e
+# Edit line
+bindkey '^W' vi-backward-kill-word
+
+# # Use emacs style line editing in zsh
 # bindkey -v
 # # Movement
 # bindkey -a 'gg' beginning-of-buffer-or-history
@@ -38,5 +43,5 @@ export EDITOR=atom
 # bindkey '^?' backward-delete-char
 # bindkey '^H' backward-delete-char
 
-# # Use incremental search
-# bindkey "^R" history-incremental-search-backward
+# Use incremental search
+bindkey "^R" history-incremental-search-backward
