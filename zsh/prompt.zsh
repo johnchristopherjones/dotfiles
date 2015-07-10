@@ -5,7 +5,7 @@
 # RPR_SHOW_GIT=(true, false) - show git status in rhs prompt
 
 # Set custom prompt
-POWERLINE_ROOT=$((pip show --isolated powerline-status &>2 || syspip show powerline-status) | grep Location | sed -e 's/Location: //g')
+POWERLINE_ROOT=$((pip show --isolated powerline-status 2>&1 || syspip show powerline-status) | grep Location | sed -e 's/Location: //g')
 source $POWERLINE_ROOT/powerline/bindings/zsh/powerline.zsh
 powerline-daemon -q
 return
