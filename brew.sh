@@ -15,7 +15,6 @@ brew upgrade
 
 # Install essential homebrews
 brew install coreutils
-# brew install fish --HEAD
 brew install hub
 brew install macvim --env-std --with-lua --custom-icons --override-system-vim --HEAD
 brew install node
