@@ -27,14 +27,11 @@ brew install the_silver_searcher
 brew install tree
 brew install wget
 
-# Install fonts
-brew tap caskroom/fonts
-brew cask install font-source-code-pro
-brew cask install font-source-code-pro-for-powerline
-
-# Install essential casks
+# Install brew cask
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 brew install caskroom/cask/brew-cask
+
+# Install cask
 brew cask install 1password
 brew cask install atom
 apm stars --install
@@ -56,6 +53,15 @@ brew cask install steam
 ## brew cask install utorrent
 brew cask install vlc
 # brew cask install mactex
+
+# Tap fonts
+brew tap caskroom/fonts
+brew cask install font-source-code-pro
+brew cask install font-source-code-pro-for-powerline
+
+# Tap alternate versions
+brew tap caskroom/versions
+brew cask install sublime-text3
 
 # Remove outdated versions from the Cellar
 brew cleanup
