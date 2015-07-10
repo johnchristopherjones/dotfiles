@@ -1,0 +1,54 @@
+#!/usr/bin/env bash
+
+# Immediately exit on errors
+set -e
+
+# submodules=$(git submodule foreach | git submodule foreach | cut -f 2 -d\')
+submodules=$(git config --local -l | cut -d'=' -f1 | grep "submodule.$1" \
+    | sed 's/^submodule\.//' | sed 's/\.url$//')
+MATCH_COUNT=$(echo "$submodules" | grep -cE '^.+$')
+
+# Guard against incorrect match counts
+if [[ $MATCH_COUNT = 0 ]]
+    then
+        echo 'No matches' >&2
+        exit 1
+elif [[ $MATCH_COUNT > 1 ]]
+    then
+        echo 'Too many matches:' >&2
+        while read -r submodule; do
+            echo "  $submodule"
+        done <<< "$submodules"
+        exit 1
+else
+    submodule=$submodules
+fi
+
+handleError () {
+    # Save the error code
+    errorcode=$?
+
+    echo "error $errorcode" >&2
+    echo "the command exiting at the time of the error was" >&2
+    echo "$BASH_COMMAND" >&2
+    echo "on line ${BASH_LINENO[0]}" >&2
+    exit $errorcode
+}
+
+# Starting with rebase
+echo "Check for unstaged changes."
+git rebase HEAD
+# Remove config entries
+echo "Remove config entries: submodule.$1"
+git config -f .git/config --remove-section submodule.$1
+git config -f .gitmodules --remove-section submodule.$1
+git add .gitmodules
+# Remove directory from index
+echo "Remove directory from index: $1"
+git rm --cached $1
+# Delete unused files
+rm -rf $1
+rm -rf .git/modules/$1
+# Commit
+echo "Commit"
+git commit
