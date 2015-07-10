@@ -28,6 +28,8 @@ export EDITOR=atom
 bindkey -e
 # Edit line
 bindkey '^W' vi-backward-kill-word
+# Set word characters (included in backward-kill-word)
+export WORDCHARS='*?_-[]~=&;!#$%^(){}<>'
 
 # # Use emacs style line editing in zsh
 # bindkey -v
