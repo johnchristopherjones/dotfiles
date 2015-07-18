@@ -5,10 +5,13 @@
 # RPR_SHOW_GIT=(true, false) - show git status in rhs prompt
 
 # Set custom prompt
-POWERLINE_ROOT=$((pip show --isolated powerline-status 2>&1 || syspip show powerline-status) | grep Location | sed -e 's/Location: //g')
-source $POWERLINE_ROOT/powerline/bindings/zsh/powerline.zsh
-powerline-daemon -q
-return
+if hash powerline-daemon 2>/dev/null; then
+    POWERLINE_ROOT=$((pip show --isolated powerline-status 2>&1 || syspip show powerline-status) | grep Location | sed -e 's/Location: //g')
+    source $POWERLINE_ROOT/powerline/bindings/zsh/powerline.zsh
+    powerline-daemon -q
+else
+    source ~/.dotfiles/liquidprompt/liquidprompt
+fi
 
 # Allow for variable/function substitution in prompt
 setopt prompt_subst
@@ -42,6 +45,10 @@ else
     fg[pink]=$fg[magenta]
     fg[darkred]=$fg[red]
 fi
+
+
+# Quit; not using the following prompt
+return
 
 # Current directory, truncated to 3 path elements (or 4 when one of them is "~")
 # The number of elements to keep can be specified as ${1}
