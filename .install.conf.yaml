@@ -3,7 +3,6 @@
 - link:
     ~/.dotfiles: ''
     ~/.bashrc: bashrc
-    # ~/.zsh: zsh
     # ~/.emacs: emacs
     ~/.gitfiles: gitfiles
     ~/.gitconfig: gitfiles/gitconfig
@@ -25,9 +24,9 @@
     ~/.atom/styles.less:
         create: true
         path: atom/styles.less
+    ~/.config/powerline:
+        create: true
+        path: config/powerline/
 
 - shell:
     - [git update-submodules, Installing submodules]
-    -
-        - bash -c 'PIP_REQUIRE_VIRTUALENV=false pip install powerline-status'
-        - Install Powerline via pip
