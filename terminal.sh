@@ -22,7 +22,7 @@ terminalSettings =
     numberOfRows: 24
     cleanCommands: ['screen', 'tmux']
     fontAntialiasing: true
-    fontName: 'SourceCodePro-Regular'
+    fontName: 'LiterationMonoPowerline'
     fontSize: 14
     normalTextColor:
         red: 0.7725337743759155
@@ -46,13 +46,66 @@ defaultSettings = Terminal.defaultSettings()
 originalSettings = defaultSettings.properties()
 # return console.log JSON.stringify(originalSettings, null, '    ')
 
-for key, newValue of terminalSettings
+# Check whether an object is Array or not
+# @type Boolean
+# @param {object} subject is the variable that is
+# tested for Array identity check
+isArray = (->
+    # Use compiler's own isArray when available
+    if Array.isArray
+        return Array.isArray
+
+    # Retain references to variables for performance
+    # optimization
+    objectToStringFn = Object.prototype.toString
+    arrayToStringResult = objectToStringFn.call []
+
+    (subject) ->
+        return objectToStringFn.call(subject) == arrayToStringResult
+)()
+
+console.log JSON.stringify originalSettings
+cson = (subject, indent=1) ->
+    if indent == 0
+        indention = ''
+    else
+        indention = Array(indent).join '  '
+    if isArray subject
+        "\n#{indention}#{JSON.stringify(subject)}"
+    else if typeof subject == 'object'
+        ("\n#{indention}#{key}:#{cson subject[key], indent + 1}" for key in Object.keys(subject).sort()).join ''
+    else
+        " #{JSON.stringify(subject)}"
+
+console.log cson originalSettings
+
+return
+cson = (obj) ->
+    if isArray obj
+        console.log "#{JSON.stringify(obj)}"
+    else if typeof obj == 'object'
+        console.log "obj #{obj}"
+    else
+        console.log "#{obj}"
+
+return console.log cson terminalSettings
+
+for key in Object.keys(terminalSettings).sort()
+    newValue = terminalSettings[key]
     origValue = originalSettings[key]
-    if JSON.stringify(origValue) != JSON.stringify(newValue)
-        defaultSettings[key] = newValue
-        console.log "Change #{JSON.stringify(key)}"
-        console.log "   from #{JSON.stringify(origValue)}"
-        console.log "   to #{JSON.stringify(newValue)}"
+
+    if isArray origValue
+        console.log "# #{key}: #{JSON.stringify(origValue)}"
+    else if typeof origValue == 'object'
+        console.log "# #{key}:"
+        console.log "#   #{subKey}: #{JSON.stringify(value)}" for subKey, value of origValue
+    else
+        console.log "* #{key}: #{JSON.stringify(origValue)}"
+
+    # console.log "# #{key}: #{JSON.stringify(origValue)}"
+    # if JSON.stringify(origValue) != JSON.stringify(newValue)
+        # defaultSettings[key] = newValue
+        # console.log "#{key}: #{JSON.stringify(newValue)}"
 
 # End of CoffeeScript
 EOF
