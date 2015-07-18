@@ -19,6 +19,9 @@ sudo scutil --set HostName $name
 sudo scutil --set LocalHostName $name
 sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string $name
 
+# Enable full keyboard access on all controls
+defaults write NSGlobalDomain AppleKeyboardUIMode -int 2
+
 # Disable the sound effects on boot
 # sudo nvram SystemAudioVolume=" "
 
@@ -50,7 +53,7 @@ defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
 sudo tmutil disablelocal
 
 # Disable the sudden motion sensor as it's not useful for SSDs
-# sudo pmset -a sms 0
+sudo pmset -a sms 0
 
 ################################################################################
 # Screen

@@ -26,6 +26,13 @@ brew install the_silver_searcher
 brew install tree
 brew install wget
 
+# Install pip packages
+syspip install powerline-status
+syspip install powerline-gitstatus
+
+# Install node packages
+npm install -g coffee-script
+
 # Install brew cask
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 brew install caskroom/cask/brew-cask
@@ -36,13 +43,13 @@ brew cask install atom
 apm stars --install
 brew cask install dropbox
 brew cask install evernote
-brew cask install flux
+# brew cask install flux
 brew cask install google-chrome
 # brew cask install hazel
 brew cask install keyboard-maestro
 # brew cask install kaleidoscope
 # brew cask install microsoft-office
-brew cask install mplayerx
+# brew cask install mplayerx
 brew cask install skype
 brew cask install spotify
 brew cask install steam
@@ -50,13 +57,14 @@ brew cask install steam
 ## brew cask install torbrowser
 ## brew cask install trim-enabler
 ## brew cask install utorrent
-brew cask install vlc
+# brew cask install vlc
 # brew cask install mactex
 
 # Tap fonts
 brew tap caskroom/fonts
 brew cask install font-source-code-pro
 brew cask install font-source-code-pro-for-powerline
+brew cask install font-liberation-mono-for-powerline
 
 # Tap alternate versions
 brew tap caskroom/versions
