@@ -24,6 +24,9 @@ KEYTIMEOUT=1 # corresponds to 10ms
 # Use vim as the editor
 export EDITOR=atom
 
+# Use less as the pager
+export PAGER=less
+
 # Use emacs style line editing in zsh
 bindkey -e
 # Edit line
