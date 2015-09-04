@@ -17,3 +17,5 @@
   "unity-ui":
     colorStatusIndicatorsInTreeView: true
   "atom-alignment": {}
+  "atom-beautify":
+    _analyticsUserId: "0182df0a-d5f8-49bc-b228-bbab605d1920"
