@@ -3,7 +3,7 @@
 - link:
     ~/.dotfiles: ''
     ~/.bashrc: bashrc
-    # ~/.emacs: emacs
+    ~/.emacs.d: emacs
     ~/.gitfiles: gitfiles
     ~/.gitconfig: gitfiles/gitconfig
     ~/.hushlogin: hushlogin
