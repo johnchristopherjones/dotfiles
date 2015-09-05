@@ -17,3 +17,9 @@
   "unity-ui":
     colorStatusIndicatorsInTreeView: true
   "atom-alignment": {}
+  minimap: {}
+  "markdown-preview": {}
+  "markdown-mindmap": {}
+".coffee.source":
+  editor:
+    tabLength: 2
