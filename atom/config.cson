@@ -20,6 +20,22 @@
   minimap: {}
   "markdown-preview": {}
   "markdown-mindmap": {}
+  "ever-notedown": {}
+  "spell-check":
+    grammars: [
+      "source.asciidoc"
+      "source.gfm"
+      "text.git-commit"
+      "text.plain"
+      "text.plain.null-grammar"
+      "source.litcoffee"
+      "text.markdown.evnd.mathjax.source.litcoffee.inline.html"
+      "text.markdown.evnd.mathjax.source.gfm.inline.html"
+      "text.markdown.evnd.source.gfm.inline.html"
+    ]
+".json.source":
+  editor:
+    tabLength: 2
 ".coffee.source":
   editor:
     tabLength: 2
