@@ -3,6 +3,8 @@
     invisibles: {}
     showIndentGuide: true
     tabLength: 4
+    fontFamily: "Essential PragmataPro"
+    fontSize: 15
   core:
     themes: [
       "seti-ui"
