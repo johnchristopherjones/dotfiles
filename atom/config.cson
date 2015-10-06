@@ -33,6 +33,8 @@
       "text.markdown.evnd.mathjax.source.gfm.inline.html"
       "text.markdown.evnd.source.gfm.inline.html"
     ]
+  "linter-flake8":
+    executablePath: "/usr/local/bin/flake8"
 ".json.source":
   editor:
     tabLength: 2
