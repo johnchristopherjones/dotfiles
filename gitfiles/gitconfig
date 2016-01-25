@@ -20,6 +20,7 @@
 	ci = commit
 	st = status
 	unstage = reset HEAD --
+    deleted = log --diff-filter=D --summary
 	last = log -1 HEAD
 	visual = !gitk
 	stash-unapply = !git stash show -p | git apply -R

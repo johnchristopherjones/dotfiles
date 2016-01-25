@@ -1,3 +1,4 @@
+
 #!/bin/sh
 
 # Derived from https://github.com/daviesjamie/dotfiles
@@ -61,10 +62,7 @@ brew cask install steam
 # brew cask install mactex
 
 # Tap fonts
-brew tap caskroom/fonts
-brew cask install font-source-code-pro
-brew cask install font-source-code-pro-for-powerline
-brew cask install font-liberation-mono-for-powerline
+brew tap homebrew/services
 
 # Tap alternate versions
 brew tap caskroom/versions

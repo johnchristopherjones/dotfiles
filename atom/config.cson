@@ -1,28 +1,32 @@
 "*":
-  editor:
-    invisibles: {}
-    showIndentGuide: true
-    tabLength: 4
-    fontFamily: "Essential PragmataPro"
-    fontSize: 15
+  "atom-alignment": {}
   core:
+    disabledPackages: [
+      "line-ending-selector"
+    ]
     themes: [
       "seti-ui"
       "seti-syntax"
     ]
+  editor:
+    fontFamily: "Essential PragmataPro"
+    fontSize: 16
+    invisibles: {}
+    showIndentGuide: true
+    tabLength: 4
+  "ever-notedown": {}
   "exception-reporting":
     userId: "da82e34e-ff7a-e29a-d995-03a3d26e3eb1"
-  welcome:
-    showOnStartup: false
-  "tree-view": {}
-  linter: {}
-  "unity-ui":
-    colorStatusIndicatorsInTreeView: true
-  "atom-alignment": {}
-  minimap: {}
-  "markdown-preview": {}
+  linter:
+    showErrorPanel: false
+  "linter-flake8":
+    ignoreErrorCodes: [
+      "D203"
+    ]
+    projectConfigFile: "setup.cfg"
   "markdown-mindmap": {}
-  "ever-notedown": {}
+  "markdown-preview": {}
+  minimap: {}
   "spell-check":
     grammars: [
       "source.asciidoc"
@@ -35,13 +39,18 @@
       "text.markdown.evnd.mathjax.source.gfm.inline.html"
       "text.markdown.evnd.source.gfm.inline.html"
     ]
-  "linter-flake8":
-    executablePath: "/usr/local/bin/flake8"
+  "tree-view":
+    hideVcsIgnoredFiles: true
+  "unity-ui":
+    colorStatusIndicatorsInTreeView: true
+  welcome:
+    showOnStartup: false
+  "xml-formatter": {}
+".coffee.source":
+  "atom-beautify":
+    _analyticsUserId: "0182df0a-d5f8-49bc-b228-bbab605d1920"
+  editor:
+    tabLength: 2
 ".json.source":
   editor:
     tabLength: 2
-".coffee.source":
-  editor:
-    tabLength: 2
-  "atom-beautify":
-    _analyticsUserId: "0182df0a-d5f8-49bc-b228-bbab605d1920"
