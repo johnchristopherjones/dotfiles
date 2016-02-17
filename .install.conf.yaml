@@ -7,6 +7,7 @@
     ~/.gitfiles: gitfiles
     ~/.gitconfig: gitfiles/gitconfig
     ~/.hushlogin: hushlogin
+    ~/.screenrc: screenrc
     ~/.zsh: zsh/
     ~/.zshrc: zshrc
     ~/.atom/config.cson:
