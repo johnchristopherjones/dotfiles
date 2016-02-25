@@ -20,7 +20,7 @@ brew install hub
 brew install macvim --env-std --with-lua --custom-icons --override-system-vim --HEAD
 brew install node
 brew install pandoc
-brew install python
+brew install python3
 brew install ruby
 brew install ssh-copy-id
 brew install the_silver_searcher
@@ -28,8 +28,8 @@ brew install tree
 brew install wget
 
 # Install pip packages
-syspip install powerline-status
-syspip install powerline-gitstatus
+sudo -H pip3 install powerline-status
+sudo -H pip3 install powerline-gitstatus
 
 # Install node packages
 npm install -g coffee-script

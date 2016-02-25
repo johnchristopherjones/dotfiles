@@ -10,7 +10,6 @@
     ]
   editor:
     fontFamily: "Essential PragmataPro"
-    fontSize: 16
     invisibles: {}
     showIndentGuide: true
     tabLength: 4
