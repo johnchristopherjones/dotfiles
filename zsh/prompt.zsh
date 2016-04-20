@@ -6,9 +6,9 @@
 
 # Set custom prompt
 if hash powerline-daemon 2>/dev/null; then
-    POWERLINE_ROOT=$((pip show --isolated powerline-status 2>&1 || syspip show powerline-status) | grep Location | sed -e 's/Location: //g')
+    POWERLINE_ROOT=$((pip3.5 show --isolated powerline-status 2>&1) | grep Location | sed -e 's/Location: //g')
     source $POWERLINE_ROOT/powerline/bindings/zsh/powerline.zsh
-    powerline-daemon -q
+    /usr/local/bin/powerline-daemon -q
 else
     source ~/.dotfiles/liquidprompt/liquidprompt
 fi
