@@ -27,6 +27,7 @@
     update-submodules = submodule update --init --recursive
     upgrade-submodules = submodule update --init --remote
     list-submodules = !git submodule foreach | cut -f 2 -d\\'
+    wow = log --all --graph --decorate --oneline --simplify-by-decoration
 
 [core]
 	autocrlf = false
