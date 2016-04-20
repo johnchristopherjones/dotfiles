@@ -16,8 +16,7 @@
   "ever-notedown": {}
   "exception-reporting":
     userId: "da82e34e-ff7a-e29a-d995-03a3d26e3eb1"
-  linter:
-    showErrorPanel: false
+  linter: {}
   "linter-flake8":
     ignoreErrorCodes: [
       "D203"
