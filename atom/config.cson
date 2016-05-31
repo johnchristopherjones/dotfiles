@@ -3,16 +3,21 @@
   core:
     disabledPackages: [
       "line-ending-selector"
+      "platformio-ide-terminal"
+      "platformio-ide"
+    ]
+    packagesWithKeymapsDisabled: [
+      "script"
     ]
     themes: [
       "seti-ui"
       "seti-syntax"
     ]
   editor:
+    autoIndent: false
     fontFamily: "Essential PragmataPro"
     invisibles: {}
     showIndentGuide: true
-    tabLength: 4
   "ever-notedown": {}
   "exception-reporting":
     userId: "da82e34e-ff7a-e29a-d995-03a3d26e3eb1"
@@ -20,8 +25,9 @@
   "linter-flake8":
     ignoreErrorCodes: [
       "D203"
+      "F403"
     ]
-    projectConfigFile: "setup.cfg"
+    projectConfigFile: "./setup.cfg"
   "markdown-mindmap": {}
   "markdown-preview": {}
   minimap: {}
@@ -37,6 +43,8 @@
       "text.markdown.evnd.mathjax.source.gfm.inline.html"
       "text.markdown.evnd.source.gfm.inline.html"
     ]
+  "tool-bar":
+    position: "Left"
   "tree-view":
     hideVcsIgnoredFiles: true
   "unity-ui":
@@ -47,8 +55,3 @@
 ".coffee.source":
   "atom-beautify":
     _analyticsUserId: "0182df0a-d5f8-49bc-b228-bbab605d1920"
-  editor:
-    tabLength: 2
-".json.source":
-  editor:
-    tabLength: 2
