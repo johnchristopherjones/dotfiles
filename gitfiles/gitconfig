@@ -13,6 +13,7 @@
 
 [alias]
 	lg = log --graph --pretty=tformat:'%Cred%h%Creset -%C(magenta)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+	lrg = log --left-right --graph --pretty=tformat:'%Cred%h%Creset -%C(magenta)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
 	cdiff = diff --no-ext-diff
 	logl = log --pretty=oneline --abbrev-commit
 	co = checkout
