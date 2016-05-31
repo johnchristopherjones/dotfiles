@@ -8,19 +8,15 @@
  * http://www.lesscss.org
  */
 
-.tree-view {
+
+// Use Pragmata Pro everywhere
+.tree-view, .tab-bar, .status-bar {
     font-family: "Essential PragmataPro";
 }
 
-.tab-bar {
-    font-family: "Essential PragmataPro";
-    .tab {
-    }
-}
-
+// Increase status bar font size
 .status-bar {
-    font-family: "Essential PragmataPro";
-    font-size: 11px;
+    // font-size: 13px;
 }
 
 // style the background and foreground colors on the atom-text-editor-element
@@ -45,4 +41,41 @@ atom-text-editor::shadow {
     .indent-guide {
         box-shadow: inset 2px 0;
     }
+}
+
+//
+// Basarat's find result styles
+// https://gist.github.com/basarat/87d0a17a850b74a1cc07
+//
+// These changes
+//
+atom-text-editor::shadow .highlight.find-result .region {
+  background: rgb(163,163,0);
+  transition: background-color 0.2s, border-color 0.2s;
+}
+atom-text-editor::shadow .highlight.current-result .region,
+atom-text-editor::shadow .highlight.current-result ~ .highlight.selection .region {
+  background: orange;
+  border-color: red;
+}
+
+//
+// Basarat's git gutter styles
+// https://gist.github.com/basarat/87d0a17a850b74a1cc07
+//
+atom-text-editor::shadow .gutter .line-number.git-line-added {
+    border-left-width: 10px;
+    border-left-color: lime;
+    padding-left: calc(~"0.5em - 10px");
+}
+atom-text-editor::shadow .gutter .line-number.git-line-modified {
+    border-left-width: 10px;
+    border-left-color: yellow;
+    padding-left: calc(~"0.5em - 10px");
+}
+atom-text-editor::shadow .gutter .line-number.git-line-removed:before {
+    bottom: -15px;
+    margin-top: -15px;
+    border-width: 15px;
+    border-left-color: red;
 }
