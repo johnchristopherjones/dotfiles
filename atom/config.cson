@@ -12,7 +12,6 @@
     fontFamily: "Essential PragmataPro"
     invisibles: {}
     showIndentGuide: true
-    tabLength: 4
   "ever-notedown": {}
   "exception-reporting":
     userId: "da82e34e-ff7a-e29a-d995-03a3d26e3eb1"
@@ -24,7 +23,9 @@
     projectConfigFile: "setup.cfg"
   "markdown-mindmap": {}
   "markdown-preview": {}
-  minimap: {}
+  minimap:
+    plugins:
+      pigments: true
   "spell-check":
     grammars: [
       "source.asciidoc"
