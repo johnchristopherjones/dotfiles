@@ -1,5 +1,10 @@
 "*":
   "atom-alignment": {}
+  "atom-beautify":
+    general:
+      _analyticsUserId: "41ff6f49-35aa-468d-98d4-47b5774d7acd"
+    html:
+      indent_size: 2
   core:
     disabledPackages: [
       "line-ending-selector"
@@ -14,7 +19,7 @@
       "seti-syntax"
     ]
   editor:
-    autoIndent: false
+    autoIndentOnPaste: false
     fontFamily: "Essential PragmataPro"
     invisibles: {}
     showIndentGuide: true
@@ -55,3 +60,9 @@
 ".coffee.source":
   "atom-beautify":
     _analyticsUserId: "0182df0a-d5f8-49bc-b228-bbab605d1920"
+".source.ts":
+  editor:
+    autoIndent: true
+".source.tsx":
+  editor:
+    autoIndent: false
