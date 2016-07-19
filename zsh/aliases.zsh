@@ -116,3 +116,7 @@ alias systail='tail -f /var/log/system.log'
 
 # Show what commands you use the most
 alias profileme="history | awk '{print \$2}' | awk 'BEGIN{FS=\"|\"}{print \$1}' | sort | uniq -c | sort -n | tail -n 20 | sort -nr"
+
+# Fix screen sharing by unload and reloading the serice
+# Note that as of OS X 10.11 this is a legacy command; try kickstart?
+alias fixscreen='sudo launchctl unload /System/Library/LaunchDaemons/com.apple.screensharing.plist && sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.screensharing.plist'
