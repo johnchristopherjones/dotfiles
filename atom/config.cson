@@ -5,6 +5,7 @@
       _analyticsUserId: "41ff6f49-35aa-468d-98d4-47b5774d7acd"
     html:
       indent_size: 2
+  "atom-typescript": {}
   core:
     disabledPackages: [
       "line-ending-selector"

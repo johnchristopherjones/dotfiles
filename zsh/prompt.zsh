@@ -6,7 +6,7 @@
 
 # Set custom prompt
 if hash powerline-daemon 2>/dev/null; then
-    POWERLINE_ROOT=$((pip3.5 show --isolated powerline-status 2>&1) | grep Location | sed -e 's/Location: //g')
+    POWERLINE_ROOT=$((python3 -m pip show --isolated powerline-status 2>&1) | grep Location | sed -e 's/Location: //g')
     source $POWERLINE_ROOT/powerline/bindings/zsh/powerline.zsh
     /usr/local/bin/powerline-daemon -q
 else
