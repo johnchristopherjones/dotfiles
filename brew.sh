@@ -17,6 +17,7 @@ brew upgrade
 # Install essential homebrews
 brew install coreutils
 brew install diff-so-fancy
+brew install emojify
 brew install hub
 brew install macvim --env-std --with-lua --custom-icons --override-system-vim --HEAD
 brew install node

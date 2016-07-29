@@ -1,14 +1,25 @@
 "*":
   "atom-alignment": {}
+  "atom-beautify":
+    general:
+      _analyticsUserId: "41ff6f49-35aa-468d-98d4-47b5774d7acd"
+    html:
+      indent_size: 2
   core:
     disabledPackages: [
       "line-ending-selector"
+      "platformio-ide-terminal"
+      "platformio-ide"
+    ]
+    packagesWithKeymapsDisabled: [
+      "script"
     ]
     themes: [
       "seti-ui"
       "seti-syntax"
     ]
   editor:
+    autoIndentOnPaste: false
     fontFamily: "Essential PragmataPro"
     invisibles: {}
     showIndentGuide: true
@@ -19,8 +30,9 @@
   "linter-flake8":
     ignoreErrorCodes: [
       "D203"
+      "F403"
     ]
-    projectConfigFile: "setup.cfg"
+    projectConfigFile: "./setup.cfg"
   "markdown-mindmap": {}
   "markdown-preview": {}
   minimap:
@@ -38,6 +50,8 @@
       "text.markdown.evnd.mathjax.source.gfm.inline.html"
       "text.markdown.evnd.source.gfm.inline.html"
     ]
+  "tool-bar":
+    position: "Left"
   "tree-view":
     hideVcsIgnoredFiles: true
   "unity-ui":
@@ -48,8 +62,9 @@
 ".coffee.source":
   "atom-beautify":
     _analyticsUserId: "0182df0a-d5f8-49bc-b228-bbab605d1920"
+".source.ts":
   editor:
-    tabLength: 2
-".json.source":
+    autoIndent: true
+".source.tsx":
   editor:
-    tabLength: 2
+    autoIndent: false
