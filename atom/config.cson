@@ -17,17 +17,17 @@
     ]
     themes: [
       "seti-ui"
-      "seti-syntax"
+      "seti-classic-syntax"
     ]
   editor:
-    autoIndentOnPaste: false
     fontFamily: "Essential PragmataPro"
     invisibles: {}
     showIndentGuide: true
   "ever-notedown": {}
   "exception-reporting":
     userId: "da82e34e-ff7a-e29a-d995-03a3d26e3eb1"
-  linter: {}
+  linter:
+    errorPanelHeight: 45
   "linter-flake8":
     ignoreErrorCodes: [
       "D203"
@@ -36,9 +36,10 @@
     projectConfigFile: "./setup.cfg"
   "markdown-mindmap": {}
   "markdown-preview": {}
-  minimap:
-    plugins:
-      pigments: true
+  minimap: {}
+  "seti-syntax": {}
+  "seti-ui":
+    compactView: true
   "spell-check":
     grammars: [
       "source.asciidoc"

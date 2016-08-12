@@ -26,7 +26,10 @@ atom-text-editor {
         width: 4px;
     }
 }
-
+atom-panel-container.modal atom-panel.modal .list-group li.selected,
+atom-panel-container.modal atom-panel.modal .list-group .event.selected {
+  background-color: #242c2f;
+}
 // To style other content in the text editor's shadow DOM, use the ::shadow
 // expression
 atom-text-editor::shadow {
