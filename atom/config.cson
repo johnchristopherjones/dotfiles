@@ -33,7 +33,6 @@
       "D203"
       "F403"
     ]
-    projectConfigFile: "./setup.cfg"
   "markdown-mindmap": {}
   "markdown-preview": {}
   minimap: {}
