@@ -1,43 +1,60 @@
 [include]
-  	# For username / creds / etc
-	# http://stackoverflow.com/questions/8505335/hiding-github-token-in-gitconfig
-  	path = ~/.gitconfig_local
+# For username / creds / etc
+# http://stackoverflow.com/questions/8505335/hiding-github-token-in-gitconfig
+path = ~/.gitconfig_local
 
 [push]
-	default = matching
+default = matching
 
 [color]
-	status = auto
-	diff = auto
-	branch = auto
+status = auto
+diff = auto
+branch = auto
 
 [alias]
-	lg = log --graph --pretty=tformat:'%Cred%h%Creset -%C(magenta)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
-	lrg = log --left-right --graph --pretty=tformat:'%Cred%h%Creset -%C(magenta)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
-	cdiff = diff --no-ext-diff
-	logl = log --pretty=oneline --abbrev-commit
-	co = checkout
-	br = branch
-	ci = commit
-	st = status
-	unstage = reset HEAD --
-    deleted = log --diff-filter=D --summary
-	last = log -1 HEAD
-	visual = !gitk
-	stash-unapply = !git stash show -p | git apply -R
-    update-submodules = submodule update --init --recursive
-    upgrade-submodules = submodule update --init --remote
-    list-submodules = !git submodule foreach | cut -f 2 -d\\'
-    wow = log --all --graph --decorate --oneline --simplify-by-decoration
+# Shortcuts
+co = checkout
+br = branch
+ci = commit
+st = status
+# Safe diff when external diff isn't available
+cdiff = diff --no-ext-diff
+# Colorful 1-line verbose log
+lg = log --graph --pretty=tformat:'%Cred%h%Creset -%C(magenta)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+# Show left/right logs for comparing commit differences
+lrg = log --left-right --graph --pretty=tformat:'%Cred%h%Creset -%C(magenta)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+# Very brief 1-line log
+logl = log --pretty=oneline --abbrev-commit
+# Show last commit
+last = log -1 HEAD
+# List all file deletions
+deleted = log --diff-filter=D --summary
+# Pretty merge graph
+wow = log --all --graph --decorate --oneline --simplify-by-decoration
+# Undo staging (leave working directory alone)
+unstage = reset HEAD --
+# Launch gitk
+visual = !gitk
+# Undo a stash apply
+stash-unapply = !git stash show -p | git apply -R
+# Manage submodules
+update-submodules = submodule update --init --recursive
+upgrade-submodules = submodule update --init --remote
+list-submodules = !git submodule foreach | cut -f 2 -d\\'
+# Diff word documents
+wdiff = diff --word-diff=color --unified=1
+# Show changes to a word document over time
+wlog = log -p --word-diff=color
+
 
 [core]
-	autocrlf = false
-    attributesfile = ~/.gitfiles/gitattributes
-    editor = atom --wait
-	excludesfile = ~/.gitfiles/gitignore
+autocrlf = false
+attributesfile = ~/.gitfiles/gitattributes
+editor = atom --wait
+excludesfile = ~/.gitfiles/gitignore
 
 [diff "odf"]
-      textconv = odf2txt --break-sentences
+textconv = odf2txt --break-sentences
 
 [diff "pandoc"]
 # http://blog.martinfenner.org/2014/08/25/using-microsoft-word-with-git/
@@ -50,10 +67,11 @@ textconv=pandoc --to=markdown
 prompt = false
 
 [man]
-      viewer = catman
+viewer = catman
 
 [man "catman"]
-     cmd = man -P cat
+cmd = man -P cat
+
 [pager]
-	diff = diff-so-fancy | less --tabs=4 -RFX
-	show = diff-so-fancy | less --tabs=4 -RFX
+diff = diff-so-fancy | less --tabs=4 -RFX
+show = diff-so-fancy | less --tabs=4 -RFX
