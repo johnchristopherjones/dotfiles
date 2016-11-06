@@ -31,6 +31,11 @@ brew install pandoc
 brew install python3
 brew install ruby
 
+# Install databases (development)
+brew install mongodb
+brew install postgres
+brew install redis
+
 # Install pip packages
 sudo -H pip3 install --isolated powerline-status
 sudo -H pip3 install --isolated powerline-gitstatus
