@@ -72,6 +72,7 @@ brew cask install kaleidoscope
 # brew cask install discord
 # brew cask install gog-galaxy
 # brew cask install handbreak
+# brew cask install iterm2
 # brew cask install java
 # brew cask install mactex
 # brew cask install mplayerx
