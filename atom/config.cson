@@ -1,4 +1,6 @@
 "*":
+  "activate-power-mode":
+    autoToggle: false
   "atom-alignment": {}
   "atom-beautify":
     general:
@@ -15,6 +17,7 @@
     packagesWithKeymapsDisabled: [
       "script"
     ]
+    telemetryConsent: "limited"
     themes: [
       "seti-ui"
       "seti-classic-syntax"
@@ -35,8 +38,12 @@
     ]
   "markdown-mindmap": {}
   "markdown-preview": {}
-  minimap: {}
-  "seti-syntax": {}
+  minimap:
+    plugins:
+      pigments: true
+      pigmentsDecorationsZIndex: 0
+  "seti-syntax":
+    themeColor: "Green"
   "seti-ui":
     compactView: true
   "spell-check":
