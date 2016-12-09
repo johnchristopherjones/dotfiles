@@ -15,6 +15,7 @@
     packagesWithKeymapsDisabled: [
       "script"
     ]
+    telemetryConsent: "no"
     themes: [
       "seti-ui"
       "seti-classic-syntax"
