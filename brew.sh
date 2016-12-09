@@ -25,6 +25,7 @@ brew install wget
 # Install development environment brews
 # brew install macvim --env-std --with-lua --custom-icons --override-system-vim --HEAD
 brew install emojify
+brew install git-flow-avh
 brew install hub
 brew install node
 brew install pandoc
