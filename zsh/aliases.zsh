@@ -22,9 +22,6 @@ alias mv='mv -i'
 # git related aliases
 alias gag='git exec ag'
 
-# Install git ignore files
-function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
-
 # Update dotfiles
 function dfu() {
     (
