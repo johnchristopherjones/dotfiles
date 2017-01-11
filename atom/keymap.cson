@@ -30,3 +30,7 @@
 'body':
   'cmd-shift-[': 'pane:show-previous-item'
   'cmd-shift-]': 'pane:show-next-item'
+
+
+'atom-text-editor[data-grammar~="html"]:not([mini])':
+  'shift-space': 'emmet:expand-abbreviation'
