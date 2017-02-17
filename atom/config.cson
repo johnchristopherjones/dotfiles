@@ -13,6 +13,7 @@
       "line-ending-selector"
       "platformio-ide-terminal"
       "platformio-ide"
+      "language-python"
     ]
     packagesWithKeymapsDisabled: [
       "script"
