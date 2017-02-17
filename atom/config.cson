@@ -15,10 +15,12 @@
       "line-ending-selector"
       "platformio-ide-terminal"
       "platformio-ide"
+      "linter-flake8"
       "language-python"
     ]
     packagesWithKeymapsDisabled: [
       "script"
+      "emmet"
     ]
     telemetryConsent: "no"
     themes: [

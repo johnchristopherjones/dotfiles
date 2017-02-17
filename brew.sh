@@ -45,7 +45,7 @@ sudo -H pip3 install --isolated powerline-gitstatus
 # npm install -g coffee-script
 
 # Install brew cask
-export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+# export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 brew install caskroom/cask/brew-cask
 
 # Install essential casks
@@ -65,7 +65,7 @@ brew cask install spotify
 brew cask install things
 
 # Install work casks
-brew cask install kaleidoscope
+# brew cask install kaleidoscope
 # brew cask install microsoft-office
 
 # Install home casks
@@ -88,7 +88,7 @@ brew cask install kaleidoscope
 ## brew cask install utorrent
 
 # Tap brew services
-brew tap homebrew/services
+# brew tap homebrew/services
 
 # Tap alternate versions
 brew tap caskroom/versions
