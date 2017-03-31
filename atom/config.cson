@@ -10,6 +10,7 @@
   "atom-typescript": {}
   "atom-xsltransform":
     externalXslToolPath: "xsltproc --novalid %XSL %XML"
+  "color-picker": {}
   core:
     disabledPackages: [
       "line-ending-selector"
@@ -17,6 +18,16 @@
       "platformio-ide"
       "linter-flake8"
       "language-python"
+    ]
+    ignoredNames: [
+      ".git"
+      ".hg"
+      ".svn"
+      ".DS_Store"
+      "._*"
+      "Thumbs.db"
+      "desktop.ini"
+      "node_modules"
     ]
     packagesWithKeymapsDisabled: [
       "script"
