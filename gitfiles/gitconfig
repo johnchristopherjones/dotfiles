@@ -11,8 +11,11 @@ status = auto
 diff = auto
 branch = auto
 
+[merge]
+	conflictstyle = diff3
+
 [alias]
-# Extensions
+# Extensions -- use `git ignore list` to see standard .gitignore starters
 ignore = !curl -L -s https://www.gitignore.io/api/$@
 # Shortcuts
 co = checkout
@@ -77,6 +80,7 @@ prompt = false
 [pager]
 diff = diff-so-fancy | less --tabs=4 -RFX
 show = diff-so-fancy | less --tabs=4 -RFX
+
 [filter "lfs"]
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
