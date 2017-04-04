@@ -1,9 +1,9 @@
 # Use colors in coreutils utilities output
 if command -v gls > /dev/null 2>&1; then
-    alias ls='gls --color'
+    alias ls='gls --color -N'
     alias dircolors='gdircolors'
 elif ls --color -d . &>/dev/null 2>&1; then
-    alias ls='ls --color'
+    alias ls='ls --color -N'
 else
     alias ls='ls -G'
 fi
