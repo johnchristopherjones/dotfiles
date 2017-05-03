@@ -68,6 +68,10 @@ brew cask install things
 # brew cask install kaleidoscope
 # brew cask install microsoft-office
 
+# Install development casks
+brew cask install graphiql
+brew cask install postico
+
 # Install home casks
 # brew cask install battle-net
 # brew cask install discord
