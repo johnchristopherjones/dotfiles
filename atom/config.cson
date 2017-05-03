@@ -45,13 +45,13 @@
   "ever-notedown": {}
   "exception-reporting":
     userId: "da82e34e-ff7a-e29a-d995-03a3d26e3eb1"
-  linter:
-    errorPanelHeight: 45
+  linter: {}
   "linter-flake8":
     ignoreErrorCodes: [
       "D203"
       "F403"
     ]
+  "linter-ui-default": {}
   "markdown-mindmap": {}
   "markdown-preview": {}
   minimap:
