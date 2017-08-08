@@ -18,6 +18,6 @@
 # https://github.com/bevry/cson#what-is-cson
 
 '.source.ts':
-  'ES6 Import':
-    'prefix': 'import'
-    'body': 'import { $2 } from \'$1\';'
+  'import':
+      'prefix': 'import'
+      'body': 'import { $2 } from \'$1\';$3'

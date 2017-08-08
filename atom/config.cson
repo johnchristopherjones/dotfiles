@@ -51,10 +51,12 @@
       "D203"
       "F403"
     ]
-  "linter-ui-default": {}
+  "linter-ui-default":
+    panelHeight: 56
   "markdown-mindmap": {}
   "markdown-preview": {}
   minimap:
+    disablePythonDocLinks: true
     plugins:
       pigments: true
       pigmentsDecorationsZIndex: 0
@@ -76,8 +78,7 @@
     ]
   "tool-bar":
     position: "Left"
-  "tree-view":
-    hideVcsIgnoredFiles: true
+  "tree-view": {}
   "unity-ui":
     colorStatusIndicatorsInTreeView: true
   welcome:

@@ -57,6 +57,7 @@ autocrlf = false
 attributesfile = ~/.gitfiles/gitattributes
 editor = nano
 excludesfile = ~/.gitfiles/gitignore
+	quotepath = false
 
 [diff "odf"]
 textconv = odf2txt --break-sentences
@@ -86,3 +87,5 @@ show = diff-so-fancy | less --tabs=4 -RFX
 	process = git-lfs filter-process
 	required = true
 	clean = git-lfs clean -- %f
+[log]
+	date = iso
