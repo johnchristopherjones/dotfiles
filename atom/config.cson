@@ -40,6 +40,7 @@
     ]
   editor:
     fontFamily: "Essential PragmataPro"
+    fontSize: 17
     invisibles: {}
     showIndentGuide: true
   "ever-notedown": {}
