@@ -18,6 +18,7 @@
       "platformio-ide"
       "linter-flake8"
       "language-python"
+      "linter-mypy"
     ]
     ignoredNames: [
       ".git"
@@ -52,12 +53,11 @@
       "D203"
       "F403"
     ]
-  "linter-ui-default":
-    panelHeight: 56
+  "linter-mypy": {}
+  "linter-ui-default": {}
   "markdown-mindmap": {}
   "markdown-preview": {}
   minimap:
-    disablePythonDocLinks: true
     plugins:
       pigments: true
       pigmentsDecorationsZIndex: 0
@@ -79,7 +79,8 @@
     ]
   "tool-bar":
     position: "Left"
-  "tree-view": {}
+  "tree-view":
+    hideVcsIgnoredFiles: true
   "unity-ui":
     colorStatusIndicatorsInTreeView: true
   welcome:
