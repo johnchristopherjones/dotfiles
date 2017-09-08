@@ -1,0 +1,19 @@
+// Place your settings in this file to overwrite the default settings
+{
+    "atomKeymap.promptV3Features": true,
+    "editor.fontFamily": "'Essential PragmataPro', Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontSize": 14,
+    "editor.formatOnPaste": true,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.scrollBeyondLastLine": false,
+    "extensions.ignoreRecommendations": false,
+    "markdown.preview.fontFamily": "'Segoe WPC', 'Segoe UI', 'SFUIText-Light', 'HelveticaNeue-Light', sans-serif",
+    "terminal.external.osxExec": "iTerm.app",
+    "terminal.integrated.fontFamily": "'Essential PragmataPro'",
+    "terminal.integrated.fontLigatures": true,
+    "terminal.integrated.fontSize": 14,
+    "terminal.integrated.lineHeight": 1.2,
+    "window.zoomLevel": 0,
+    "workbench.activityBar.visible": true,
+    "workbench.colorTheme": "Seti"
+}
