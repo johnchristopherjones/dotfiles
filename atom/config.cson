@@ -40,9 +40,11 @@
       "seti-classic-syntax"
     ]
   editor:
-    fontFamily: "Essential PragmataPro"
-    fontSize: 17
+    fontFamily: "PragmataPro"
+    fontSize: 16
     invisibles: {}
+    preferredLineLength: 78
+    scrollSensitivity: 80
     showIndentGuide: true
   "ever-notedown": {}
   "exception-reporting":

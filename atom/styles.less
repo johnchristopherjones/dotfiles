@@ -11,7 +11,9 @@
 
 // Use Pragmata Pro everywhere
 .tree-view, .tab-bar, .status-bar {
-    font-family: "Essential PragmataPro";
+    font-family: "PragmataPro";
+    // font-size: 12px;
+    // font-family: "FiraCode-Light";
 }
 
 // Increase status bar font size
@@ -22,9 +24,10 @@
 // style the background and foreground colors on the atom-text-editor-element
 // itself
 atom-text-editor {
-    .wrap-guide {
-        width: 4px;
-    }
+  text-rendering: optimizeLegibility;
+  .wrap-guide {
+      width: 4px;
+  }
 }
 atom-panel-container.modal atom-panel.modal .list-group li.selected,
 atom-panel-container.modal atom-panel.modal .list-group .event.selected {
