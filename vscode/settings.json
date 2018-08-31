@@ -1,19 +1,41 @@
 // Place your settings in this file to overwrite the default settings
 {
     "atomKeymap.promptV3Features": true,
-    "editor.fontFamily": "'Essential PragmataPro', Menlo, Monaco, 'Courier New', monospace",
+    "diffEditor.ignoreTrimWhitespace": true,
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": false
+    },
+    "editor.fontFamily": "'PragmataPro', Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontLigatures": true,
     "editor.fontSize": 14,
-    "editor.formatOnPaste": true,
+    "editor.formatOnPaste": false,
+    "editor.formatOnSave": false,
     "editor.multiCursorModifier": "ctrlCmd",
     "editor.scrollBeyondLastLine": false,
+    "editor.tabSize": 2,
+    "editor.trimAutoWhitespace": true,
     "extensions.ignoreRecommendations": false,
+    "html.format.wrapAttributes": "force",
+    "html.suggest.html5": true,
     "markdown.preview.fontFamily": "'Segoe WPC', 'Segoe UI', 'SFUIText-Light', 'HelveticaNeue-Light', sans-serif",
+    "prettier.printWidth": 120,
+    "prettier.singleQuote": true,
+    "python.linting.enabled": true,
+    "python.linting.flake8Enabled": true,
+    "python.linting.lintOnSave": true,
+    "python.linting.pep8Enabled": true,
     "terminal.external.osxExec": "iTerm.app",
-    "terminal.integrated.fontFamily": "'Essential PragmataPro'",
-    "terminal.integrated.fontLigatures": true,
+    "terminal.integrated.fontFamily": "'PragmataPro'",
     "terminal.integrated.fontSize": 14,
     "terminal.integrated.lineHeight": 1.2,
-    "window.zoomLevel": 0,
-    "workbench.activityBar.visible": true,
-    "workbench.colorTheme": "Seti"
+    "tslint.autoFixOnSave": true,
+    "vsicons.projectDetection.autoReload": true,
+    "window.zoomLevel": 1,
+    "workbench.activityBar.visible": false,
+    "workbench.colorTheme": "Seti",
+    "[python]": {
+        "editor.tabSize": 4
+    },
+    "explorer.confirmDragAndDrop": false,
+    "python.sortImports.args": ["-m 4"]
 }
