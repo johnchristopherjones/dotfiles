@@ -7,6 +7,9 @@
       _analyticsUserId: "41ff6f49-35aa-468d-98d4-47b5774d7acd"
     html:
       indent_size: 2
+  "atom-ide-ui":
+    hyperclick:
+      darwinTriggerKeys: "ctrlKey"
   "atom-typescript": {}
   "atom-xsltransform":
     externalXslToolPath: "xsltproc --novalid %XSL %XML"
@@ -19,6 +22,7 @@
       "linter-flake8"
       "language-python"
       "linter-mypy"
+      "linter"
     ]
     ignoredNames: [
       ".git"
@@ -35,13 +39,9 @@
       "emmet"
     ]
     telemetryConsent: "no"
-    themes: [
-      "seti-ui"
-      "seti-classic-syntax"
-    ]
   editor:
     fontFamily: "PragmataPro"
-    fontSize: 16
+    fontSize: 15
     invisibles: {}
     preferredLineLength: 78
     scrollSensitivity: 80
@@ -64,7 +64,7 @@
       pigments: true
       pigmentsDecorationsZIndex: 0
   "seti-syntax":
-    themeColor: "Green"
+    dynamicColor: false
   "seti-ui":
     compactView: true
   "spell-check":
