@@ -45,7 +45,7 @@ stash-unapply = !git stash show -p | git apply -R
 # Manage submodules
 update-submodules = submodule update --init --recursive
 upgrade-submodules = submodule update --init --remote
-list-submodules = !git submodule foreach | cut -f 2 -d\\'
+##list-submodules = !git submodule foreach | cut -f 2 -d\\'
 # Diff word documents
 wdiff = diff --word-diff=color --unified=1
 # Show changes to a word document over time
@@ -59,7 +59,7 @@ pr-clean = "!git for-each-ref refs/heads/pr/* --format='%(refname)' | while read
 autocrlf = false
 attributesfile = ~/.gitfiles/gitattributes
 editor = nano
-excludesfile = ~/.gitfiles/gitignore
+	excludesfile = /Users/jcj/.gitfiles/gitignore
 	quotepath = false
 
 [diff "odf"]
