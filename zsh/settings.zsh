@@ -5,7 +5,7 @@ autoload -Uz compinit && compinit
 autoload -U edit-command-line && zle -N edit-command-line
 
 # Set automatic cd (typing directory name with no 'cd')
-setopt autocd
+# setopt autocd
 
 # Enable interactive comments (# on the command line)
 setopt interactivecomments
