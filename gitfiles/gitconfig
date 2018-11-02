@@ -58,9 +58,9 @@ pr-clean = "!git for-each-ref refs/heads/pr/* --format='%(refname)' | while read
 [core]
 autocrlf = false
 attributesfile = ~/.gitfiles/gitattributes
-editor = nano
-	excludesfile = /Users/jcj/.gitfiles/gitignore
-	quotepath = false
+editor = emacsclient -t
+excludesfile = /Users/jcj/.gitfiles/gitignore
+quotepath = false
 
 [diff "odf"]
 textconv = odf2txt --break-sentences
