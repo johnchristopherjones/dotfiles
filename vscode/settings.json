@@ -5,7 +5,7 @@
     "editor.codeActionsOnSave": {
         "source.organizeImports": false
     },
-    "editor.fontFamily": "'PragmataPro', Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontFamily": "'PragmataPro Liga', Menlo, Monaco, 'Courier New', monospace",
     "editor.fontLigatures": true,
     "editor.fontSize": 14,
     "editor.formatOnPaste": false,
@@ -37,5 +37,8 @@
         "editor.tabSize": 4
     },
     "explorer.confirmDragAndDrop": false,
-    "python.sortImports.args": ["-m 4"]
+    "python.sortImports.args": [
+        "-m 4"
+    ],
+    "vsicons.dontShowNewVersionMessage": true
 }
