@@ -18,7 +18,7 @@
     "html.format.wrapAttributes": "force",
     "html.suggest.html5": true,
     "markdown.preview.fontFamily": "'Segoe WPC', 'Segoe UI', 'SFUIText-Light', 'HelveticaNeue-Light', sans-serif",
-    "prettier.printWidth": 120,
+    "prettier.printWidth": 140,
     "prettier.singleQuote": true,
     "python.linting.enabled": true,
     "python.linting.flake8Enabled": true,
@@ -40,5 +40,11 @@
     "python.sortImports.args": [
         "-m 4"
     ],
-    "vsicons.dontShowNewVersionMessage": true
+    "vsicons.dontShowNewVersionMessage": true,
+    "breadcrumbs.enabled": false,
+    "[typescript]": {
+    
+},
+"workbench.editor.showTabs": true,
+"typescript.updateImportsOnFileMove.enabled": "always"
 }
