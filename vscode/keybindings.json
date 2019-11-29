@@ -17,5 +17,24 @@
     {
         "key": "cmd+k cmd+l",
         "command": "editor.action.transformToLowercase"
+    },
+    {
+        "key": "ctrl+`",
+        "command": "workbench.action.terminal.focus"
+    },
+    {
+        "key": "cmd+k cmd+o",
+        "command": "extension.cycleAngularComponentFiles",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+k ctrl+o",
+        "command": "-extension.cycleAngularComponentFiles",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+`",
+        "command": "workbench.action.closePanel",
+        "when": "terminalFocus"
     }
 ]

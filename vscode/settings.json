@@ -11,7 +11,6 @@
     "editor.formatOnPaste": false,
     "editor.formatOnSave": false,
     "editor.multiCursorModifier": "ctrlCmd",
-    "editor.scrollBeyondLastLine": false,
     "editor.tabSize": 2,
     "editor.trimAutoWhitespace": true,
     "extensions.ignoreRecommendations": false,
@@ -23,14 +22,13 @@
     "python.linting.enabled": true,
     "python.linting.flake8Enabled": true,
     "python.linting.lintOnSave": true,
-    "python.linting.pep8Enabled": true,
+    "python.linting.pycodestyleEnabled": true,
     "terminal.external.osxExec": "iTerm.app",
     "terminal.integrated.fontFamily": "'PragmataPro'",
     "terminal.integrated.fontSize": 14,
     "terminal.integrated.lineHeight": 1.2,
     "tslint.autoFixOnSave": true,
-    "vsicons.projectDetection.autoReload": true,
-    "window.zoomLevel": 1,
+    "window.zoomLevel": 2,
     "workbench.activityBar.visible": false,
     "workbench.colorTheme": "Seti",
     "[python]": {
@@ -40,11 +38,43 @@
     "python.sortImports.args": [
         "-m 4"
     ],
-    "vsicons.dontShowNewVersionMessage": true,
     "breadcrumbs.enabled": false,
+    "workbench.editor.showTabs": true,
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "python.jediEnabled": false,
+    "liveshare.featureSet": "insiders",
+    "calva.paredit.defaultKeyMap": "strict",
+    "calva.syncReplNamespaceToCurrentFile": true,
+    "gitlens.hovers.currentLine.over": "line",
+    "gitlens.blame.toggleMode": "window",
+    "gitlens.codeLens.enabled": false,
+    "[sql]": {},
+    "workbench.sideBar.location": "right",
+    "vsicons.dontShowNewVersionMessage": true,
+    "git.ignoreMissingGitWarning": true,
+    "editor.scrollBeyondLastLine": false,
+    "search.exclude": {
+        "**/node_modules": true,
+        "**/bower_components": true,
+        "**/bazel-out": true,
+        "**/dist": true,
+        "**/aio/src/generated": true,
+    },
+    "files.watcherExclude": {
+        "**/.git/objects/**": true,
+        "**/.git/subtree-cache/**": true,
+        "**/node_modules/**": true,
+        "**/bazel-out/**": true,
+        "**/dist/**": true,
+        "**/aio/src/generated/**": true
+    },
+    "clang-format.executable": "${workspaceRoot}/node_modules/.bin/clang-format",
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features"
+    },
     "[typescript]": {
-    
-},
-"workbench.editor.showTabs": true,
-"typescript.updateImportsOnFileMove.enabled": "always"
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
 }
