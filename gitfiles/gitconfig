@@ -92,6 +92,10 @@ show = diff-so-fancy | less --tabs=4 -RFX
 	clean = git-lfs clean -- %f
 [log]
 	date = iso
+[diff]
+  tool = default-difftool
+[difftool "default-difftool"]
+  cmd = code --wait --diff $LOCAL $REMOTE
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path =
