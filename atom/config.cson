@@ -56,7 +56,8 @@
       "F403"
     ]
   "linter-mypy": {}
-  "linter-ui-default": {}
+  "linter-ui-default":
+    showPanel: true
   "markdown-mindmap": {}
   "markdown-preview": {}
   minimap:
