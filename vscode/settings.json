@@ -38,14 +38,21 @@
     "python.sortImports.args": [
         "-m 4"
     ],
-    "breadcrumbs.enabled": false,
+    "breadcrumbs.enabled": true,
     "workbench.editor.showTabs": true,
     "typescript.updateImportsOnFileMove.enabled": "always",
     "editor.suggestSelection": "first",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "python.jediEnabled": false,
     "liveshare.featureSet": "insiders",
-    "calva.paredit.defaultKeyMap": "strict",
+    "calva.paredit.defaultKeyMap": "original",
+    "calva.prettyPrintingOptions": {
+        "enabled": true,
+        "printEngine": "pprint",
+        "width": 120,
+        "maxLength": 10,
+        "maxDepth": 2
+    },
     "calva.syncReplNamespaceToCurrentFile": true,
     "gitlens.hovers.currentLine.over": "line",
     "gitlens.blame.toggleMode": "window",
@@ -75,6 +82,12 @@
         "editor.defaultFormatter": "vscode.html-language-features"
     },
     "[typescript]": {
-        "editor.defaultFormatter": "vscode.typescript-language-features"
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
+    "kite.showWelcomeNotificationOnStartup": false,
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "editor.renderWhitespace": "all",
+    "calva.showDocstringInParameterHelp": true,
 }
