@@ -95,3 +95,14 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 source /Users/jcj/.oh-my-zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[[ -f /Users/jcj/.config/yarn/global/node_modules/tabtab/.completions/serverless.zsh ]] && . /Users/jcj/.config/yarn/global/node_modules/tabtab/.completions/serverless.zsh
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[[ -f /Users/jcj/.config/yarn/global/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/jcj/.config/yarn/global/node_modules/tabtab/.completions/sls.zsh
+
+# nvm
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
