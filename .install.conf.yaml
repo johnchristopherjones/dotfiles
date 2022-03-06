@@ -8,7 +8,7 @@
     ~/.hushlogin: hushlogin
     ~/.screenrc: screenrc
     ~/.zsh: zsh/
-    ~/.zshrc: zshrc
+    ~/.zshrc: zsh/zshrc
     ~/.atom/config.cson:
         create: true
         path: atom/config.cson
@@ -24,9 +24,6 @@
     ~/.atom/styles.less:
         create: true
         path: atom/styles.less
-    ~/.config/powerline:
-        create: true
-        path: config/powerline/
     ~/Library/Application Support/Code/User/keybindings.json:
         create: true
         path: vscode/keybindings.json
