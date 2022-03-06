@@ -1,4 +1,3 @@
-
 #!/bin/sh
 
 # Derived from https://github.com/daviesjamie/dotfiles
