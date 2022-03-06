@@ -14,21 +14,21 @@
     ~/.zshenv: zsh/zshenv
     ~/.spacemacs: spacemacs
     ~/.default-python-packages: default-python-packages
-    ~/.atom/config.cson:
-        create: true
-        path: atom/config.cson
-    ~/.atom/config.cson:
-        create: true
-        path: atom/config.cson
-    ~/.atom/keymap.cson:
-        create: true
-        path: atom/keymap.cson
-    ~/.atom/snippets.cson:
-        create: true
-        path: atom/snippets.cson
-    ~/.atom/styles.less:
-        create: true
-        path: atom/styles.less
+    # ~/.atom/config.cson:
+    #     create: true
+    #     path: atom/config.cson
+    # ~/.atom/config.cson:
+    #     create: true
+    #     path: atom/config.cson
+    # ~/.atom/keymap.cson:
+    #     create: true
+    #     path: atom/keymap.cson
+    # ~/.atom/snippets.cson:
+    #     create: true
+    #     path: atom/snippets.cson
+    # ~/.atom/styles.less:
+    #     create: true
+    #     path: atom/styles.less
 
 - shell:
     - [git update-submodules, Installing submodules]
