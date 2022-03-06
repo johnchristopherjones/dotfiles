@@ -13,6 +13,7 @@ branch = auto
 
 [merge]
 	conflictstyle = diff3
+	ff = only
 
 [alias]
 # Extensions -- use `git ignore list` to see standard .gitignore starters
