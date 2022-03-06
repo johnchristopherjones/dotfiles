@@ -7,6 +7,7 @@
     ~/.gitconfig: gitfiles/gitconfig
     ~/.gitignore: gitfiles/gitignore
     ~/.gitattributes: gitfiles/gitattributes
+    ~/.gitfiles: gitfiles/
     ~/.hushlogin: hushlogin
     ~/.screenrc: screenrc
     ~/.zsh: zsh/
