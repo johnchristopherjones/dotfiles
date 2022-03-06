@@ -11,6 +11,7 @@
     ~/.zsh: zsh/
     ~/.zshrc: zsh/zshrc
     ~/.zshenv: zsh/zshenv
+    ~/.default-python-packages: default-python-packages
     ~/.atom/config.cson:
         create: true
         path: atom/config.cson
