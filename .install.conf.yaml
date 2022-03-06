@@ -24,15 +24,6 @@
     ~/.atom/styles.less:
         create: true
         path: atom/styles.less
-    ~/Library/Application Support/Code/User/keybindings.json:
-        create: true
-        path: vscode/keybindings.json
-    ~/Library/Application Support/Code/User/settings.json:
-        create: true
-        path: vscode/settings.json
-    ~/Library/Application Support/Code/User/snippets:
-        create: true
-        path: vscode/snippets
 
 - shell:
     - [git update-submodules, Installing submodules]
