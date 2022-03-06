@@ -62,6 +62,7 @@ attributesfile = ~/.gitfiles/gitattributes
 editor = emacsclient -t
 excludesfile = /Users/jcj/.gitfiles/gitignore
 quotepath = false
+	pager = diff-so-fancy | less --tabs=4 -RFX
 
 [diff "odf"]
 textconv = odf2txt --break-sentences
