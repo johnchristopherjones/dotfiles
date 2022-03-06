@@ -2,6 +2,7 @@
 
 - link:
     ~/.dotfiles: ''
+    ~/.asdfrc: asdfrc
     ~/.bashrc: bashrc
     ~/.gitconfig: gitfiles/gitconfig
     ~/.gitignore: gitfiles/gitignore
