@@ -122,3 +122,5 @@ show = diff-so-fancy | less --tabs=4 -RFX
 	whitespace = red reverse
 [diff-so-fancy]
 	first-run = false
+[init]
+	defaultBranch = main
