@@ -43,6 +43,7 @@ imagemagick
 imagemagick@6
 inetutils
 jpeg
+keychain
 lame
 leiningen
 libcroco
