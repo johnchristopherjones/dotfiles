@@ -3,8 +3,9 @@
 - link:
     ~/.dotfiles: ''
     ~/.bashrc: bashrc
-    ~/.gitfiles: gitfiles
     ~/.gitconfig: gitfiles/gitconfig
+    ~/.gitignore: gitfiles/gitignore
+    ~/.gitattributes: gitfiles/gitattributes
     ~/.hushlogin: hushlogin
     ~/.screenrc: screenrc
     ~/.zsh: zsh/
