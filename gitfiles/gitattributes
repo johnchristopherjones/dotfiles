@@ -1,2 +1,3 @@
 # http://blog.martinfenner.org/2014/08/25/using-microsoft-word-with-git/
 *.docx diff=pandoc
+*.dvc merge=dvc
