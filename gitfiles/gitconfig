@@ -13,7 +13,7 @@ branch = auto
 
 [merge]
 	conflictstyle = diff3
-	ff = only
+#	ff = only
 
 [alias]
 # Extensions -- use `git ignore list` to see standard .gitignore starters
@@ -29,6 +29,8 @@ cdiff = diff --no-ext-diff
 lg = log --graph --pretty=tformat:'%Cred%h%Creset -%C(magenta)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
 # Show left/right logs for comparing commit differences
 lrg = log --left-right --graph --pretty=tformat:'%Cred%h%Creset -%C(magenta)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+gbage = !git branch -r --sort=-committerdate --format='%(HEAD)%(color:yellow)%(refname:short)|%(color:bold green)%(committerdate:relative)|%(color:blue)%(subject)|%(color:magenta)%(authorname)%(color:reset)' --color=always | column -ts'|'
+
 # Very brief 1-line log
 logl = log --pretty=oneline --abbrev-commit
 # Show last commit
@@ -87,11 +89,6 @@ prompt = false
 diff = diff-so-fancy | less --tabs=4 -RFX
 show = diff-so-fancy | less --tabs=4 -RFX
 
-[filter "lfs"]
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
-	clean = git-lfs clean -- %f
 [log]
 	date = iso
 [diff]
@@ -124,3 +121,16 @@ show = diff-so-fancy | less --tabs=4 -RFX
 	first-run = false
 [init]
 	defaultBranch = main
+[mailmap]
+	file = /Users/jcj/.gitfiles/mailmap
+[merge "dvc"]
+	name = DVC merge driver
+	driver = dvc git-hook merge-driver --ancestor %O --our %A --their %B
+[credential "https://github.com"]
+	helper = 
+	helper = !/opt/homebrew/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/opt/homebrew/bin/gh auth git-credential
+[rebase]
+	updateRefs = true
