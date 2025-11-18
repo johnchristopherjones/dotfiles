@@ -1,0 +1,95 @@
+
+################################################################################
+# MySQL Client
+################################################################################
+function beam_mysql_up() {
+    mysqld_safe --datadir=$(rtx where mysql)/data
+}
+function beam_mysql_down() {
+    mysqladmin -u root shutdown
+}
+function beam_mysql_client() {
+    mysql --user=root
+}
+
+################################################################################
+# Dan Sajner's Docker login alias
+# https://beamdental.slack.com/archives/CJ3JG1P2T/p1639427171085300?thread_ts=1639427081.084700&cid=CJ3JG1P2T
+################################################################################
+# alias dl='AWS_PROFILE=beam-tech-org-services aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 932532311803.dkr.ecr.us-east-1.amazonaws.com'
+alias dl='hub ecr docker-login'
+
+################################################################################
+# checkout develop and get latest on every repo in ~/src/beam
+################################################################################
+function beam-pull () {
+    for dir in accounting-server authentication-server beam-api beam-frontend js-frontend quotes-server underwriting-server services-dashboard
+    # for dir in ~/src/beam/
+    do
+		echo "\nUpdating: $dir\n"
+        pushd $HOME/src/beam/$dir > /dev/null
+        git switch develop
+		if ! git pull; then
+			echo "\nUpdate failed at: $dir\n"
+			popd
+			return 1
+		fi
+		popd > /dev/null
+    done
+}
+
+################################################################################
+# Open BuildKite for the current repo
+################################################################################
+function beam-bk () {
+	base_url='https://buildkite.com/beam-dental'
+	current_dir=${PWD##*/}
+	branch=$(git branch --show-current)
+	if [ -z "$branch" ]
+	then
+		echo 'No branch set.'
+		exit 1
+	fi
+	encoded_branch=$(python -c "import sys, urllib as ul; print ul.quote_plus(sys.argv[1])" "$branch")
+	url="$base_url/$current_dir/builds?branch=$encoded_branch"
+	echo "Opening Buildkite for: \n Repo: $current_dir\n branch: $branch"
+	open "$url"
+}
+
+################################################################################
+# Configure gem bundle auth
+################################################################################
+function beam-bundle-auth() {
+	bundle config set --global rubygems.pkg.github.com $(op item get github.com --fields=github-id,beam-ruby-repos | sed 's/,/:/g')
+	printf "If 'bundle install' still doesn't work, check if beam-ruby-repos is expired: https://github.com/settings/tokens"
+}
+
+################################################################################
+# Hub (beam-cli) aliases
+################################################################################
+alias hd="hub dev"
+alias hda="hub dev attach"
+alias hds="hub dev status"
+alias hdu="hub dev up"
+alias hduc="hub dev up core"
+alias hdu-nodeps="hub dev up --no-deps"
+alias hdsrv="hub dev services"
+
+
+# Switch DBs to BBS or HIG
+alias to_hig='cd ~/src/beam/quotes-server;scripts/db_switch quotes_server_dev_hig;cd ~/src/beam/beam-api; scripts/db_switch beam_api_dev_hig'
+alias to_bbs='cd ~/src/beam/quotes-server;scripts/db_switch;cd ~/src/beam/beam-api; scripts/db_switch'
+
+# Restart as PE-BBS or PE-HIG
+alias rpe='hub dev stop pe && cd ~/src/beam/beam-api && scripts/db_switch && cd ~/src/beam/quotes-server && scripts/db_switch && cd ~/src/beam/accounting-server && scripts/db_switch && TENANT_CONFIG_NAME=bbs hub dev up pe'
+alias rpeh='hub dev stop pe && cd ~/src/beam/beam-api && scripts/db_switch beam_api_dev_hig && cd ~/src/beam/quotes-server && scripts/db_switch quotes_server_dev_hig && cd ~/src/beam/accounting-server && scripts/db_switch accounting_server_dev_hig && TENANT_CONFIG_NAME=hig hub dev up pe'
+
+beam_repo_initial_setup() {
+    export TENANT_CONFIG_NAME=${TENANT_CONFIG_NAME:-bbs}
+    bundle install
+    bundle exec rake db:user_setup
+    bundle exec rake db:create
+    hub dev db_load_backup ${TENANT_CONFIG_NAME}
+    bundle exec rake db:dev_seed:testing_support
+    hub dev setup
+}
